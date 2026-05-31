@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NeuralRetail
 
 AI-powered retail analytics platform.
@@ -27,4 +26,3 @@ streamlit run app/streamlit_app.py
 python -m uvicorn api.main:app --reload
 =======
 # neural-retail
->>>>>>> e338271bdeddeaffbae41db690679102cf8a5f74
