@@ -1,14 +1,16 @@
 import streamlit as st
-import requests
-
-API_URL = "http://127.0.0.1:8000"
+import random
 
 st.title("NeuralRetail Dashboard")
 
 if st.button("Predict Churn"):
-    response = requests.get(f"{API_URL}/predict/churn")
-    st.json(response.json())
+    st.json({
+        "customer_id": 101,
+        "churn_score": round(random.uniform(0, 1), 2)
+    })
 
 if st.button("Predict Demand"):
-    response = requests.get(f"{API_URL}/predict/demand")
-    st.json(response.json())
+    st.json({
+        "sku": "SKU-001",
+        "predicted_demand": random.randint(100, 500)
+    })
